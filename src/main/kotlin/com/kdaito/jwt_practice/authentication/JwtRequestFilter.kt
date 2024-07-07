@@ -24,7 +24,6 @@ class JwtRequestFilter: OncePerRequestFilter() {
         response: HttpServletResponse,
         filterChain: FilterChain
     ) {
-        println("start jwt filter")
         val authorizationHeader = request.getHeader("Authorization")
 
         var username: String? = null
